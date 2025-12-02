@@ -1,0 +1,258 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft Yahei", sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: #1a365d;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    background-color: #2c5282;
+    color: #ffffff;
+}
+
+/* 首页样式 */
+.home-section {
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 100%);
+}
+
+.home-content {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #1a365d;
+}
+
+.home-content h1 span {
+    color: #3182ce;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+#toggleBtn {
+    padding: 0.8rem 2rem;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#toggleBtn:hover {
+    background-color: #2c5282;
+    transform: translateY(-2px);
+}
+
+.hidden {
+    display: none;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+/* 通用板块标题 */
+.section-title {
+    font-size: 2rem;
+    color: #1a365d;
+    margin: 3rem 0 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #3182ce;
+    margin: 0.5rem auto;
+}
+
+/* 日志页面 */
+.blog-list {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.blog-item {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid #3182ce;
+}
+
+.blog-item h3 {
+    color: #1a365d;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-date {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* 相册页面 */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.album-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.album-item:hover {
+    transform: translateY(-5px);
+}
+
+.album-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.album-item p {
+    padding: 1rem;
+    text-align: center;
+    color: #4a5568;
+}
+
+/* 爱好页面 */
+.hobby-list {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.hobby-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.hobby-item h3 {
+    color: #1a365d;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+/* 联系页面 */
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-item {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.contact-item h3 {
+    color: #1a365d;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.contact-item p {
+    color: #4a5568;
+    font-size: 1.1rem;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .home-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
